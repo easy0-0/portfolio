@@ -335,7 +335,7 @@ li:nth-child(8) .sub dl:last-child{
 .content{
     width: 100%;
     position: relative;
-    background: url(/img/img_banner_1_1.jpg) center/cover fixed;
+    background: url(../img/img_banner_1_1.jpg) center/cover fixed;
 }
 .content::before{
     content: '';
@@ -430,7 +430,7 @@ li:nth-child(8) .sub dl:last-child{
 .store{
     width: 100%;
     position: relative;
-    background: url(/img/img_banner_1_1.jpg) center/cover fixed;
+    background: url(../img/img_banner_1_1.jpg) center/cover fixed;
 }
 .store::before{
     content: '';
