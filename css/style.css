@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0; padding: 0;
+}
+ul{list-style: none;}
+html,body{width: 100%; height: 100%;}
+a:link,a:visited{
+    text-decoration: none;
+    color: unset;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #222;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+}
+body::-webkit-scrollbar-track {
+    background-color: #333;
+}
+.wrap{
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+    position: relative;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    min-width: 1280px;
+    background-color: #222;
+    overflow: hidden;
+}
+.home{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 30%;
+    height: 5%;
+    position: fixed;
+    top: 1%;
+    left: -100%;
+    z-index: 10;
+    opacity: 0;
+}
+header ul{
+    height: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+}
+header li{
+    font:1.3em 'Bebas Neue', cursive;
+    color: lightgray;
+    flex: 1 1 20%;
+    text-align: center;
+    line-height: 230%;
+    cursor: pointer;
+}
+#title{
+    color: white;
+    position: absolute;
+    top: calc(50% - 104px);
+    left: calc(50% - 258.485px);
+    /* transform: translate(-50%, -50%); */
+    font:10em 'Bebas Neue', cursive;
+    transform: scaleY(0);
+    animation: none;
+}
+@keyframes title{
+    0%{transform: scaleY(0);}
+    50%{transform: scaleY(0);}
+    60%{transform: scaleY(1.3);}
+    75%{transform :scaleY(0.8);}
+    85%{transform : scaleY(1.2);}
+    92%{transform : scaleY(0.9);}
+    97%{transform : scaleY(1.1);}
+    100%{transform: scaleY(1);}
+}
+#subtitle{
+    color: whitesmoke;
+    position: absolute;
+    font: 1.2em 'Noto Sans KR', sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    z-index: 2;
+    width: 322px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    animation: none;
+}
+@keyframes type{
+    from{width: 0;}
+}
+@keyframes cur{
+    50%{border-right-color: transparent;}
+}
+#pager{
+    position: fixed;
+    top: 40%;
+    right: 1%;
+    width: 20px;
+    height: 180px;
+    background-color:rgba(0, 0, 0, 0.1) ;
+    border-radius: 25px;
+    opacity: 0.8;
+    z-index: 10;
+}
+#pager li{
+    position: absolute;
+    top: 20px;
+    left: 2.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background: radial-gradient(rgba(255,255,255,0.1), #222,#555);
+    
+}
+.aboutme{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.aboutme .left{
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    width: 45%;
+    height: 80%;
+    background-color: white;
+    transform: skew(-30deg);
+    z-index: 2;
+    overflow: hidden;
+}
+.aboutme .right{
+    position: absolute;
+    top: 12%;
+    right: -100%;
+    width: 45%;
+    height: 80%;
+    background-color: whitesmoke;
+    transform: skew(-30deg);
+    z-index: 1;
+    transition: none;
+}
+.aboutme .moveleft{
+    left: 6%;
+    transition: all 0.8s;
+}
+.aboutme .removeleft{
+    left: -100%;
+    transition: all 0.5s;
+}
+.aboutme .moveright{
+    right: 6%;
+    transition: all 1.2s;
+}
+.aboutme .removeright{
+    right: -100%;
+    transition: all 0.8s;
+}
+.aboutme .left .l_inner{
+    width: 100%;
+    height: 100%;
+    transform: skew(30deg);
+    position: relative;
+}
+.aboutme h1{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    width: 40%;
+    height: 10%;
+    font: 4em 'Bebas Neue', cursive;
+    z-index: 10;
+    color: #222;
+}
+.l_inner .profpic{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 45%;
+    height: 30%;
+    background-blend-mode: luminosity;
+    transition: all 0.5s;
+    cursor: pointer;
+    background : url(../images/profile.png) top/cover rgba(0, 0,0, 1);
+}
+.profpic:hover{
+    background-color: transparent;
+}
+.profpic::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    width: 99%;
+    height: 98%;
+    border: 2px solid black;
+    opacity: 0;
+}
+.profpic::after{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    width: 99%;
+    height: 98%;
+    border: 2px solid #555;
+    opacity: 0;
+}
+.profpic:hover::before{
+    top: -5px;
+    left: -5px;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.profpic:hover::after{
+    top: 5px;
+    left: 5px;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.profpic span{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 99%;
+    height: 98%;
+    border: 1px solid black;
+    opacity: 1;
+    z-index: 5;
+}
+.profpic:hover span{
+    opacity: 0;
+}
+.l_inner .txt1{
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    width: 40%;
+    height: 40%;
+    margin-top: 5%;
+}
+.txt1 h3{
+    font: 2.5em 'Bebas Neue', cursive;
+    color: #222;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.txt1 ul{
+    font: 1.2em 'Noto Sans KR', sans-serif;
+    text-align: left;
+    line-height: 2em;
+    position: relative;
+}
+.txt1 li{
+    position: relative;
+}
+.txt1 li:nth-child(1){width: 30%;}
+.txt1 li:nth-child(2){width: 40%;}
+.txt1 li:nth-child(3){width: 50%;}
+.txt1 li:nth-child(4){width: 65%;}
+.txt1 li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120%;
+    height: 50%;
+    background-color: #eee;
+    z-index: -1;
+}
+.aboutme .right .r_inner{
+    width: 100%;
+    height: 100%;
+    transform: skew(30deg);
+    position: relative;
+}
+.r_inner .txt2{
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 80%;
+    height: 40%;
+    margin-top: 5%;
+}
+.txt2 h3{
+    font: 2.5em 'Bebas Neue', cursive;
+    color: #222;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.txt2 ul{
+    width: 100%;
+    font: 1.2em 'Noto Sans KR', sans-serif;
+    text-align: left;
+    line-height: 2em;
+    position: relative;
+}
+.txt2 li{
+    position: relative;
+}
+.txt2 li:nth-child(1){width: 40%;}
+.txt2 li:nth-child(2){width: 45%;}
+.txt2 li:nth-child(3){width: 50%;}
+.txt2 li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120%;
+    height: 50%;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.r_inner .txt3{
+    position: absolute;
+    top: 52%;
+    right: 0%;
+    width: 80%;
+    height: 40%;
+    margin-top: 5%;
+}
+.txt3 h3{
+    font: 2.5em 'Bebas Neue', cursive;
+    color: #222;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.txt3 ul{
+    width: 100%;
+    font: 1.2em 'Noto Sans KR', sans-serif;
+    text-align: left;
+    line-height: 2em;
+    position: relative;
+}
+.txt3 li{
+    position: relative;
+}
+.txt3 li:nth-child(1){width: 35%;}
+.txt3 li:nth-child(2){width: 45%;}
+.txt3 li:nth-child(3){width: 40%;}
+.txt3 li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120%;
+    height: 50%;
+    background-color: #ddd;
+    z-index: -1;
+}
+.skill{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.skill .skwrap{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    transform: skew(-30deg);
+    z-index: 2;
+    overflow: hidden;
+}
+.skill .skinner{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    transform: skew(30deg);
+    z-index: 2;
+    overflow: hidden;
+}
+.skill h1{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    width: 40%;
+    height: 10%;
+    font: 4em 'Bebas Neue', cursive;
+    z-index: 10;
+    color: #222;
+}
+.skinner ul{
+    margin-top: 150px;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skinner li{
+    flex: 1 1 25%;
+    height: 50%;
+    text-align: center;
+    position: relative;
+}
+.skinner li img{
+    height: 30%;
+}
+
+.skinner li p{
+    margin-top: 1%;
+    font: bold 1.2em 'Noto Sans KR', sans-serif;
+    color: #555;
+}
+.skinner li span{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font: bold 2em 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+.skinner svg{
+    position: absolute;
+    width: 30%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.cls0, .cls1, .cls2, .cls3{
+    fill:none;
+    stroke-linecap:round;
+    stroke-miterlimit:10;}
+.cls0{stroke:#eee;stroke-width:25px;}
+.cls1{stroke:#bfdce7;stroke-width:20px; stroke-dasharray: 600; stroke-dashoffset:600 ;}
+.cls2{stroke:#bfdce7;stroke-width:20px; stroke-dasharray: 600; stroke-dashoffset:600 ;}
+.cls3{stroke:#bfdce7;stroke-width:20px; stroke-dasharray: 600; stroke-dashoffset:600 ;}
+@keyframes circle01{
+    from{stroke-dashoffset:600}
+    to{stroke-dashoffset:70}
+}
+@keyframes circle02{
+    from{stroke-dashoffset:600}
+    to{stroke-dashoffset:180}
+}
+@keyframes circle03{
+    from{stroke-dashoffset:600}
+    to{stroke-dashoffset:150}
+}
+.cani01{animation: circle01 1s forwards;}
+.cani02{animation: circle02 1s forwards;}
+.cani03{animation: circle03 1s forwards;}
+
+.work{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.work h1{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    width: 40%;
+    height: 10%;
+    font: 4em 'Bebas Neue', cursive;
+    z-index: 10;
+    color: #222;
+}
+.section01, .section02, .section03, .section04{
+    position: absolute;
+    width: 26%;
+    height: 80%;
+    transform: skew(-30deg);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.work .section01{
+    top: 100%;
+    left: -30%;
+    background-color: white;
+    z-index: 1;
+}
+.work .section02{
+    top: -80%;
+    left: 55%;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+.work .section03{
+    top: 100%;
+    left: 20%;
+    background-color: white;
+    z-index: 3;
+}
+.work .section04{
+    top: -80%;
+    left: 95%;
+    background-color: whitesmoke;
+    z-index: 4;
+}
+.work .move1{
+    top: 10%;
+    left: 0;
+    transition: all 0.5s;
+}
+.work .move2{
+    top: 12%;
+    left: 25%;
+    transition: all 0.7s;
+}
+.work .move3{
+    top: 10%;
+    left: 50%;
+    transition: all 1s;
+}
+.work .move4{
+    top: 12%;
+    left: 75%;
+    transition: all 1.2s;
+}
+.work .inner{
+    width: 80%;
+    height: 70%;
+    background-color: #222;
+    margin-left: 10%;
+    margin-top: 30%;
+    border: 10px dotted white;
+    padding: 10%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.work .inner p{
+    width: 300%;
+    height: 150%;
+    transform: skew(30deg) translate(-20%, -10%);
+    background: white;
+    background-blend-mode: luminosity;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.work .section01 p{
+    background: url(../images/SPACE\ SWEEPERS.png) top/cover no-repeat;
+}
+.work .section02 p{
+    background: url(../images/dunkin.png) top/cover no-repeat;
+}
+.work .section03 p{
+    background: url(../images/museum.png) top/cover no-repeat;
+}
+.work .section04 .inner p{
+    position: relative;
+}
+.work .inner p span:not(.text){
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 2;
+    color: white;
+    font: bold 1.6em 'Noto Sans KR', sans-serif;
+    text-align: center;
+    transform: scaleY(0);
+    opacity: 0;
+    text-shadow: 1px 1px 3px #000;
+    transition: all 0.5s;
+}
+.work .section02 .inner p span{
+    top: 28%;
+}
+.work .inner:hover p{
+    background-color: #bfdce7;
+}
+.work .inner:hover p span:not(.text){
+    transform: scaleY(1);
+    opacity: 1;
+}
+.work .section04 .inner p .text{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    color: #222;
+    font: bold 2.5em 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+@keyframes txtani{
+    from{stroke-dashoffset: 811.6;}
+    to{stroke-dashoffset: 0;}
+}
+.cls-1{
+    fill:none;
+    stroke:#000;
+    stroke-width:2;
+    stroke-miterlimit:10;
+    stroke-dasharray: 811.6; 
+    stroke-dashoffset: 811.6; 
+    animation: txtani 10s 1s forwards;
+}
+.text img{
+    width: 10%;
+}
+.text svg{
+    width: 70%;
+    margin-top: 10%;
+    margin-left: -10%;
+}
+.contact{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.contact h1{
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 40%;
+    height: 10%;
+    font: 4em 'Bebas Neue', cursive;
+    z-index: 10;
+    color: white;
+}
+.contact .thx{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    left: 10%;
+}
+@keyframes txtani02{
+    from{stroke-dashoffset: 811.6;}
+    to{stroke-dashoffset: 0;}
+}
+.st0{
+    fill:none;
+    stroke: url('#gra');
+    stroke-width:2;
+    stroke-miterlimit:10;
+    stroke-dasharray: 811.6; 
+    stroke-dashoffset: 811.6; 
+    animation: txtani02 5s 0.5s infinite;
+}
+.thx svg{
+    width: 65%;
+}
+.contact .thx .thxtxt{
+    color: #eee;
+}
+.thxtxt span:nth-of-type(1){
+    display: inline-block;
+    font: normal 1.6em 'Noto Sans KR', sans-serif;
+    margin-bottom: 1%;
+}
+.thxtxt span:nth-of-type(2){
+    display: inline-block;
+    font: normal 1.4em 'Noto Sans KR', sans-serif;
+    margin-bottom: 1%;
+}
+.thxtxt span:nth-of-type(3){
+    display: inline-block;
+    font: normal 1.4em 'Noto Sans KR', sans-serif;
+}
+.contact .mail{
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 20%;
+    right: 10%;
+    padding: 3%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font: 1.5em 'Bebas Neue', cursive;
+    color: #ccc;
+    border-radius: 5%;
+    box-shadow: 0 0 1px #eee;
+}
+.mail h3{
+    font: 2em 'Bebas Neue', cursive;
+    color: #ccc;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.mail h3 img{
+    height: 33px;
+}
+fieldset{
+    display: block;
+    border: none;
+}
+.mail .pure-group:nth-of-type(1){
+    float: left;
+    width: 50%;
+}
+.mail .pure-group:nth-of-type(2){
+    width: 50%;
+}
+.mail .pure-group:nth-of-type(3){
+    width: 100%;
+    margin-top: 2%;
+}
+.mail input{
+    width: 90%;
+    height: 30px;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: whitesmoke;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.mail textarea{
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none;
+    width: 95%;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: whitesmoke;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.mail button{
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 5%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    border: none;
+    border-radius: 20px;
+    font: 1em 'Bebas Neue', cursive;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transform: translateX(120%)
+}
+.mail ::placeholder{
+    font: normal 1em 'Noto Sans KR', sans-serif;
+    color: #555;
+}
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+}
+footer p{
+    margin-top: 10px;
+    text-align: center;
+    font: normal 1em 'Noto Sans KR', sans-serif;
+    color: #777;
+}
+#honeypot {
+    display: none;
+}
+.mail .thankyou_message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 30%;
+    transform: translate(-50%,-50%);
+    font: normal 1em 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+
+
+
