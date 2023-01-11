@@ -285,20 +285,6 @@ main .txtbox{
     width: 100%;
     cursor:pointer;
 }
-.section li img{
-    width: 100%;
-}
-.section li span{
-    position: absolute;
-    background: url(../images/circle-play-regular.png) 100%/cover;
-    left: 50%;
-    bottom: 50%;
-    width: 30px;
-    height: 30px;
-    z-index: 3;
-    cursor: pointer;
-    transform: translate(-50%,50%);
-}
 .info{
     margin-top: 30px;
     width: 95%;
