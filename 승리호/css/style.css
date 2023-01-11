@@ -283,6 +283,7 @@ main .txtbox{
 }
 .section li video{
     width: 100%;
+    cursor:pointer;
 }
 .section li img{
     width: 100%;
