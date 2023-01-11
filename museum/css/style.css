@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+*{margin: 0; padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+list-style: none;}
+a:link,a:visited{
+    color: unset;
+    text-decoration: none;
+}
+.wrap{
+    width: 100%;
+}
+span img{
+    width: 20px;
+}
+.page{
+    max-width: 1440px;
+    min-width: 1280px;
+    height: 100vh;
+    margin: auto;
+}
+.page header{
+    width: 100%;
+    height: 200px;
+}
+header .nav{
+    width: 100%;
+    height: 50px;
+}
+.nav ul{
+    display: flex;
+    width: 55%;
+    height: 100%;
+    margin-left: 40%;
+}
+.nav ul li{
+    flex: 0 0 16.66%;
+    text-align: center;
+    position: relative;
+    height: 35px;
+    margin-top: 15px;
+    font: 300 0.9em 'Noto Sans KR', sans-serif;
+    line-height: 30px;
+    border-top: 2px solid black;
+    z-index: 5;
+}
+.nav ul li:nth-child(1){flex: 0 0 13%; margin-right: 1%;}
+.nav ul li:nth-child(2){flex: 0 0 13%; margin-right: 1%;}
+.nav ul li:nth-child(3){flex: 0 0 13%; margin-right: 1%;}
+.nav ul li:nth-child(4){flex: 0 0 22%; margin-right: 1%;}
+.nav ul li:nth-child(5){flex: 0 0 14%; margin-right: 1%;}
+.nav ul li:nth-child(6){flex: 0 0 25%; padding-top: 5px; box-sizing: border-box;}
+.nav ul li:nth-child(6) a{margin-left:7%; }
+.nav li span{
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.nav li dl{
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    display: none;
+    z-index: 5;
+}
+.nav dl dt{
+    margin-top: 2px;
+    padding-top: 10px;
+}
+.nav dl dt:hover,.nav dl dd:hover{
+    text-decoration: underline;
+    color: orange;
+}
+header .menu{
+    width: 100%;
+    height: 120px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.menu .logo{
+    flex: 0 0 10%;
+    margin-top: 8px;
+}
+.menu .list{
+    margin-left: 5%;
+    flex: 0 0 55%;
+    display: flex;
+    margin-top: 30px;
+}
+.menu .list li{
+    font:1.3em 'Noto Sans KR', sans-serif;
+    text-align: center;
+    flex: 0 0 15%;
+}
+.list li:nth-child(2){flex: 0 0 10%;}
+.list li:nth-child(3){flex: 0 0 10%;}
+.list li:nth-child(4){flex: 0 0 10%;}
+.menu .log{
+    flex: 0 0 15%;
+    margin-top: 35px;
+    margin-left: 10%;
+}
+.log ul{
+    width: 100%;
+    display: flex;
+}
+.log ul li{
+    text-align: center;
+    flex: 0 0 33%;
+}
+.log ul li:last-child{
+    text-align: center;
+    flex: 0 0 20%;
+    padding-top: 4px;
+    box-sizing: border-box;
+}
+.menu .sub{
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: none;
+    transition: all 0.3s;
+}
+.inner{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    padding-right: 2%;
+    box-sizing: border-box;
+    height: 40px;
+    color: white;
+    font: 300 0.7em 'Noto Sans KR', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.inner dl{
+    margin-right: 1.5%;
+}
+.page main{
+    width: 100%;
+    height: calc(100vh - 200px);
+    position: relative;
+    overflow: hidden;
+}
+main .slide{
+    width: 100%;
+    display: flex;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main .slide a{
+    display: block;
+    width: 100%;
+}
+.slide img{
+    width:1440px;
+}
+main .slmenu{
+    width: 440px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 120px;
+}
+.slmenu li, .slmenu #pause{
+    width: 25px;
+    height: 25px;
+    margin-right: 3%;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 0px 0px 2px gray;
+}
+.slmenu li:first-child{
+    background-color: indigo;
+}
+#pause img{
+    width: 28px;
+    transform: translate(-2px, -2px);
+}
+.guide{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.guide .time{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+}
+.time li:nth-child(2){
+    font: bold 1.5em 'Noto Sans KR', sans-serif;
+    margin-left: 1%;
+}
+.time li:nth-child(3) ,.time li:nth-child(5){
+    font: bold 1.1em 'Noto Sans KR', sans-serif;
+    margin-left: 1.5%;
+}
+.time li:nth-child(4), .time li:nth-child(6),.time li:nth-child(7){
+    font: normal 1.1em 'Noto Sans KR', sans-serif;
+    margin-left: 1%;
+}
+.guide img{
+    width: 30px;
+    margin-top: 30px;
+}
+.guide .price{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    line-height: 60px;
+    position: relative;
+}
+.price::before{
+    content: '';
+    width: 99%;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 3px;
+    background-color: black;
+}
+.price li:nth-child(2){
+    font: bold 1.5em 'Noto Sans KR', sans-serif;
+    margin-left: 1%;
+}
+.price li:nth-child(3){
+    font: bold 1.1em 'Noto Sans KR', sans-serif;
+    margin-left: 1.5%;
+}
+.price li:nth-child(4){
+    font: normal 1.1em 'Noto Sans KR', sans-serif;
+    margin-left: 1%;
+}
+.guide .info{
+    width: 20%;
+    height: 90px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.info li{
+    flex: 0 0 47%;
+    text-align: center;
+    font: bold 2em 'Noto Sans KR', sans-serif;
+    color: indigo;
+    transition: all 0.3s;
+    position: relative;
+}
+.info li:hover{
+    color: white;
+}
+.info li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: indigo;
+    transition: all 0.3s;
+    z-index: -1;
+}
+.info li:hover::before{
+    height: 90px;
+}
+.show{
+    width: 100%;
+    height: calc(100vh - 150px);
+    position: relative;
+    overflow: hidden;
+}
+.show h1{
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font: bold 3em 'Noto Sans KR', sans-serif;
+}
+.show .play{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    display: flex;
+}
+.play li{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.play img{
+    width: 15px;
+}
+.show .swipe{
+    width: 100%;
+    height: calc(100% - 150px);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    z-index: 2;
+}
+.swipe ul{
+    flex: 0 0 25%;
+    margin-right: 20px;
+}
+.swipe ul li:nth-child(2){
+    margin-top: 20px;
+    display: flex;
+}
+.swipe ul li:nth-child(2) span{
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    background-color: black;
+    color: white;
+}
+.swipe ul li:nth-child(2) span:nth-of-type(2){
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
+.swipe ul li:nth-child(3){
+    margin-top: 20px;
+    font: bold 1em 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+.swipe ul li:nth-child(4){
+    margin-top: 20px;
+    color: gray;
+}
+.swipe img{
+    width: 300px;
+    height: 445px;
+}
+.page .article{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.article h1{
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font: bold 3em 'Noto Sans KR', sans-serif;
+}
+.article .mic{
+    width: 50px;
+    height: 45px;
+    margin-top: 15px;
+    float: left;
+}
+.artinner{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.artinner .notice{
+    flex: 0 0 50%;
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+}
+.notice button{
+    margin-left: 1%;
+    width: 20%;
+    height: 50px;
+    font: normal 1.6em 'Noto Sans KR', sans-serif;
+    line-height: 200%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: gray;
+    cursor: pointer;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.notice ul{
+    margin-left: 1%;
+    width: 90%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    box-sizing: border-box;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid black;
+}
+.notice ul li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 0 0 16.66%;
+    font: normal 1.1em 'Noto Sans KR', sans-serif;
+    line-height: 200%;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20%;
+    box-sizing: border-box;
+}
+.notice ul li::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #222;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.notice li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.artinner .banner{
+    flex: 0 0 48%;
+    height: 40%;
+    overflow: hidden;
+    position: relative;
+}
+.banner .bannersl{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.bannersl a{
+    width: 100%;
+    display: block;
+}
+.banner img{
+    width: 694px;
+    height: 100%;
+}
+.banner .bannermenu{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    bottom: 20px;
+}
+.bannermenu li, #bannerpause{
+    width: 25px;
+    height: 25px;
+    margin-right: 6%;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}  
+.bannermenu li:first-child{
+    background-color: indigo;
+}
+#bannerpause img{
+    width: 28px;
+    height: 28px;
+    transform: translate(-2px, -2px);
+}
+.artinner .edu{
+    flex: 0 0 30%;
+    height: 50%;
+}
+.artinner .event{
+    flex: 0 0 20%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.event .eventctr{
+    position: absolute;
+    top: 0;
+    right: 30%;
+}
+.eventctr img{
+    width: 10px;
+    cursor: pointer;
+}
+.event ul img{
+    width: 70%;
+    height: 70%;
+}
+.event ul{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+}
+.event li{
+    flex: 0 0 100%;
+    height: 100%;
+}
+.event p{
+    width: 80%;
+}
+.artinner .online{
+    flex: 0 0 50%;
+    height: 50%;
+}
+.online img{
+    height: 80%;
+    cursor: pointer;
+}
+.artinner p{
+    font: bold 1.2em 'Noto Sans KR', sans-serif;
+}
+.artinner p:hover{
+    text-decoration: underline;
+}
+.artinner span{
+    color: gray;
+}
+.artinner h2{
+    margin-bottom: 10px;
+}
+.online video{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 20;
+}
+#close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10%;
+    right: 7%;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+.margin{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+}
+.sitemap{
+    width: 100%;
+    height: 50vh;
+}
+.sitemap ul{
+    display: flex;
+    border-top: 1px solid lightgray;
+    border-bottom: 0.5px solid lightgray;
+}
+.sitemap li{
+    flex: 1 1 12.5%;
+    font: bold 1.2em 'Noto Sans KR', sans-serif;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.sitemap li:not(li:last-child) dt:hover, .sitemap li:not(li:last-child) dd:hover{
+    text-decoration: underline;
+}
+.sitemap li:not(li:last-child) dl{
+    margin-top: 10%;
+}
+.sitemap dl dt,.sitemap dl dd{
+    color: gray;
+    font: normal 0.8em 'Noto Sans KR', sans-serif;
+    line-height: 200%;
+}
+.sitemap li:last-child dl dt,.sitemap li:last-child dl dd{
+    color: black;
+    font: bold 0.9em 'Noto Sans KR', sans-serif;
+    margin-left: 15%;
+    line-height: 200%;
+}
+footer{
+    width: 100%;
+    height: 30vh;
+    margin-top: 5%;
+    display: flex;
+    color: #555;
+}
+footer ul:nth-child(1){
+    flex: 1 1 23%;
+    color: black;
+    font: bold 1.1em 'Noto Sans KR', sans-serif;
+    line-height: 250%;
+}
+footer ul:nth-child(1) li:hover{
+    text-decoration: underline;
+}
+.footmenu{
+    flex: 1 1 23%;
+}
+.footmenu li{
+    font: normal 1em 'Noto Sans KR', sans-serif;
+    color: black;
+    width: 60%;
+    line-height: 400%;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+.footmenu li span{
+    display: block;
+    float: right;
+    transform: translateY(10%);
+}
+.footmenu li img{
+    height: 20px;
+}
+.footmenu dl dt,.footmenu dl dd{
+    font: normal 0.8em 'Noto Sans KR', sans-serif;
+    line-height: 200%;
+}
+.footmenu dl dt:hover,.footmenu dl dd:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.footmenu dl{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100%;
+    background-color: black;
+    color: #eee;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+footer ul:nth-child(3){
+    flex: 1 1 23%;
+    line-height: 200%;
+}
+footer ul:nth-child(3) li:hover{
+    text-decoration: underline;
+}
+footer ul:nth-child(4){
+    flex: 1 1 31%;
+    text-align: right;
+    font: normal 0.9em 'Noto Sans KR', sans-serif;
+    line-height: 200%;
+}
+footer ul:last-child li:first-child img{
+    width: 30px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+footer ul:last-child li:last-child img{
+    width: 100px;
+    margin-left: 3%;
+    margin-top: 5%;
+}
