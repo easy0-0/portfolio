@@ -215,3 +215,12 @@ $('#search').on('click',function(){
         searchlist(search, searchfor);
     }
 });
+$('#search_word').keypress(function(){
+    let search = $('#search_word').val();
+    let searchfor = $('#search_for').val();
+    if(search == ""){
+        searchlist("","");
+    }else{
+        searchlist(search, searchfor);
+    }
+});
