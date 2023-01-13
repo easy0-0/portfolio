@@ -556,9 +556,9 @@ header li{
     background: url(../images/museum.png) top/cover no-repeat;
 }
 .work .section04 .inner p{
-    position: relative;
+    background: url(../images/manage.png) top/cover no-repeat;
 }
-.work .inner p span:not(.text){
+.work .inner p span{
     display: block;
     position: absolute;
     top: 30%;
@@ -572,23 +572,15 @@ header li{
     text-shadow: 1px 1px 3px #000;
     transition: all 0.5s;
 }
-.work .section02 .inner p span{
+.work .section02 .inner p span, .work .section04 .inner p span{
     top: 28%;
 }
 .work .inner:hover p{
     background-color: #bfdce7;
 }
-.work .inner:hover p span:not(.text){
+.work .inner:hover p span{
     transform: scaleY(1);
     opacity: 1;
-}
-.work .section04 .inner p .text{
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    color: #222;
-    font: bold 2.5em 'Noto Sans KR', sans-serif;
-    text-align: center;
 }
 @keyframes txtani{
     from{stroke-dashoffset: 811.6;}
