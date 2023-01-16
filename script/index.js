@@ -7,7 +7,7 @@ $(document).ready(function(){
 });
 $(window).load(function(){
         $(spinner).fadeOut();
-    });
+    
         
 $('.page').on('mousewheel',function(e,d){
     if(d>0){
@@ -214,3 +214,4 @@ function count2(){
 }}
 }
 
+});
