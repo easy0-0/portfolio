@@ -637,7 +637,7 @@ header li{
     stroke-miterlimit:10;
     stroke-dasharray: 811.6; 
     stroke-dashoffset: 811.6; 
-    animation: txtani02 5s 0.5s infinite;
+    animation: txtani02 5s infinite;
 }
 .thx svg{
     width: 65%;
