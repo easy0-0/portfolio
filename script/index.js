@@ -69,12 +69,18 @@ function workmove(){
     $('.work .section02').addClass('move2');
     $('.work .section03').addClass('move3');
     $('.work .section04').addClass('move4');
+    $('.work .section05').addClass('move5');
+    $('.work .btnleft').addClass('appearLeft');
+    $('.work .btnright').addClass('appearRight');
 }
 function workremove(){
     $('.work .section01').removeClass('move1');
     $('.work .section02').removeClass('move2');
     $('.work .section03').removeClass('move3');
     $('.work .section04').removeClass('move4');
+    $('.work .section05').removeClass('move5');
+    $('.work .btnleft').removeClass('appearLeft');
+    $('.work .btnright').removeClass('appearRight');
 }
 
 $('#pager li').hide();
@@ -213,5 +219,15 @@ function count2(){
         $('.skinner ul li').eq(6).find('span').text(cnt2+"%");}
 }}
 }
+
+$('#btnright').click(function(){
+    $('.workinner').css('left','-100%');
+    $('.workinner2').css('left','0');
+});
+$('#btnleft').click(function(){
+    $('.workinner2').css('left','100%');
+    $('.workinner').css('left','0');
+});
+
 
 });
