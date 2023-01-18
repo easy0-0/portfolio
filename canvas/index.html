@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas_매출현황</title>
+    <script src="./script/jquery.min.js"></script>
+    <script src="./script/index.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <h2>상품별 매출현황 보고서</h2>
+        <h5>(단위 &#8361;)</h5>
+        <ul>
+            <li>
+                <p>상품명</p>
+                <p>판매가</p>
+                <p>판매량</p>
+                <p>총판매액</p>
+            </li>
+            <li>
+                <p>A</p>
+                <p><input type="number" value="15000" class="price"></p>
+                <p><input type="number" value="1253" class="quantity"></p>
+                <p></p>
+            </li>
+            <li>
+                <p>B</p>
+                <p><input type="number" value="16000" class="price"></p>
+                <p><input type="number" value="1004" class="quantity"></p>
+                <p></p>
+            </li>
+
+            <li>
+                <p>C</p>
+                <p><input type="number" value="17500" class="price"></p>
+                <p><input type="number" value="987" class="quantity"></p>
+                <p></p>
+            </li>
+
+            <li>
+                <p>D</p>
+                <p><input type="number" value="15500" class="price"></p>
+                <p><input type="number" value="1352" class="quantity"></p>
+                <p></p>
+            </li>
+
+            <li>
+                <p>E</p>
+                <p><input type="number" value="16500" class="price"></p>
+                <p><input type="number" value="726" class="quantity"></p>
+                <p></p>
+            </li>
+
+            <li>
+                <p>F</p>
+                <p><input type="number" value="17000" class="price"></p>
+                <p><input type="number" value="876" class="quantity"></p>
+                <p></p>
+            </li>
+        </ul>
+        <button id="reset">Reset</button>
+        <button id="btn">클릭해보세요</button>
+        <br><br><br><br>
+        <div class="graph">
+            <canvas width="900" height="600" style="border:1px solid lightgray" id="chart"></canvas>
+        </div>
+        <br><br><br><br>
+    </div>
+</body>
+</html>
