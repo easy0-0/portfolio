@@ -174,7 +174,7 @@ $('#title').delay(1000).css({
     'animation':'title 1.5s forwards cubic-bezier(.42,0,1,1)'
 });
 
-$('#subtitle').hide();
+
 $('header').delay(500).animate({
     'left': '0',
     'opacity' : '1'
