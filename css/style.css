@@ -93,6 +93,7 @@ header li{
     overflow: hidden;
     border-right: 1px solid;
     animation: none;
+    display: none;
 }
 @keyframes type{
     from{width: 0;}
@@ -310,6 +311,7 @@ header li{
 .txt2 li:nth-child(1){width: 40%;}
 .txt2 li:nth-child(2){width: 45%;}
 .txt2 li:nth-child(3){width: 50%;}
+.txt2 li:nth-child(4){width: 30%;}
 .txt2 li::before{
     content: '';
     position: absolute;
@@ -318,6 +320,16 @@ header li{
     width: 120%;
     height: 50%;
     background-color: #ddd;
+    z-index: -1;
+}
+.txt2 li:nth-child(4)::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120%;
+    height: 50%;
+    background-color: rgb(246, 218, 218);
     z-index: -1;
 }
 
