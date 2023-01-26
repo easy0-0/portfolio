@@ -111,6 +111,7 @@ header li{
     border-radius: 25px;
     opacity: 0.8;
     z-index: 20;
+    display: none;
 }
 #pager li{
     position: absolute;
@@ -120,6 +121,7 @@ header li{
     height: 15px;
     border-radius: 7.5px;
     background: radial-gradient(rgba(255,255,255,0.1), #222,#555);
+    display: none;
     
 }
 .aboutme{
