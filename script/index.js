@@ -83,8 +83,6 @@ function workremove(){
     $('.work .btnright').removeClass('appearRight');
 }
 
-$('#pager li').hide();
-$('#pager').hide();
 
 $(window).on('scroll',function(){
     let scr = Math.floor($(window).scrollTop());
