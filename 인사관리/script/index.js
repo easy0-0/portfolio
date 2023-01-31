@@ -165,7 +165,7 @@ function searchlist(search, searchfor){
                     $('.res').append(str);
                 if(searchfor == "search_part"){
                     chknull = reg.exec(d.DATA[i].part);
-                    console.log(chknull);
+                    // console.log(chknull);
                     if(chknull != null ){
                         member.push(d.DATA[i]);  
                         let row = $('<li class="view" />').append(
