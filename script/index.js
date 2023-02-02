@@ -70,6 +70,7 @@ function workmove(){
     $('.work .section03').addClass('move3');
     $('.work .section04').addClass('move4');
     $('.work .section05').addClass('move5');
+    $('.work .section06').addClass('move6');
     $('.work .btnleft').addClass('appearLeft');
     $('.work .btnright').addClass('appearRight');
 }
@@ -79,6 +80,7 @@ function workremove(){
     $('.work .section03').removeClass('move3');
     $('.work .section04').removeClass('move4');
     $('.work .section05').removeClass('move5');
+    $('.work .section06').removeClass('move6');
     $('.work .btnleft').removeClass('appearLeft');
     $('.work .btnright').removeClass('appearRight');
 }
