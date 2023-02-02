@@ -540,7 +540,7 @@ header li{
     z-index: 10;
     color: #222;
 }
-.section01, .section02, .section03, .section04, .section05{
+.section01, .section02, .section03, .section04, .section05, .section06{
     position: absolute;
     width: 26%;
     height: 80%;
@@ -578,6 +578,12 @@ header li{
     background-color: white;
     z-index: 1;
 }
+.work .section06{
+    top: -80%;
+    left: 55%;
+    background-color: whitesmoke;
+    z-index: 2;
+}
 .work .appearLeft{
     opacity: 1;
 }
@@ -609,6 +615,11 @@ header li{
     left: 0;
     transition: all 0.5s;
 }
+.work .move6{
+    top: 12%;
+    left: 25%;
+    transition: all 0.7s;
+}
 .work .inner{
     width: 80%;
     height: 70%;
@@ -631,7 +642,7 @@ header li{
     cursor: pointer;
 }
 .work .section01 p{
-    background: url(../images/nflix.png) top/cover no-repeat;
+    background: url(../images/naver.png) top/cover no-repeat;
 }
 .work .section02 p{
     background: url(../images/dk.png) top/cover no-repeat;
@@ -644,6 +655,9 @@ header li{
 }
 .work .section05 p{
     background: url(../images/canvas.png) top/cover no-repeat;
+}
+.work .section06 p{
+    background: url(../images/nflix.png) top/cover no-repeat;
 }
 .work .inner p span{
     display: block;
@@ -659,7 +673,7 @@ header li{
     text-shadow: 3px 3px 6px #000, -1px -1px 2px #000;
     transition: all 0.5s;
 }
-.work .section02 .inner p span, .work .section04 .inner p span{
+.work .section02 .inner p span, .work .section04 .inner p span, .work .section06 .inner p span{
     top: 28%;
 }
 .work .inner:hover p{
